@@ -1,0 +1,51 @@
+*{
+	margin: 0;
+	padding: 0;
+	line-height: 150%;
+}
+body{
+
+		background: #E5E5E5;
+		margin: 0; 
+		padding: 0;
+}
+	
+
+	textarea{
+		display: block;
+	}
+
+	button{
+		
+		border-color: #FFFFFF;
+		border-radius: 100px;
+	}
+
+	textarea{
+		margin: 10px 10px;
+		display: block;
+	}
+
+
+
+	.main{
+		/*Permite cambiar los elementos de la pantalla, empezar manipulación de los elementos*/
+		display: flex;
+	
+	}
+
+
+	.mensajeOriginal{
+		margin-top: 90px;
+
+	}
+
+	.mensajeEncriptado{
+		position: relative;
+		margin-top: 20px;
+		margin-left: 90px;
+	}
+
+	.primeraSeccion{
+		display: inline;
+	}

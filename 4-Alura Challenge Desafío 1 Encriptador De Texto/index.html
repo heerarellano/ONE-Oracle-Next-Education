@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Encriptador de texto.</title>
+</head>
+
+<body>
+
+	<header>
+		<img src="./imagenes/logo.png">
+	</header>
+
+	<!--Antes HTML 5 se utilizaba div, en HTML 5 tenemos section -->
+	<section class="primeraSeccion">
+		<textarea class="mensajeOriginal" cols="40"
+		rows="6">			
+		</textarea>
+
+		<h6>Solo letras minúsculas y sin acentos</h6>
+
+		<div class="botones">
+			<button class="encriptar" onclick="encriptarMensaje()">
+				Encriptar
+			</button>
+
+			<button class="desencriptar">
+				Desencriptar
+			</button>
+
+		</div>
+		
+	</section>
+
+	<section class="segundaSeccion">
+		
+		<textarea class="mensajeEncriptado" cols="18" rows="8">
+			
+		</textarea>
+
+	</section>
+</body>
+</html>
+<script type="text/javascript">
+
+const mensajeOriginal = document.querySelector('.mensajeOriginal'); 
+const mensajeEncriptado = document.querySelector('.mensajeEncriptado'); 
+
+
+// function encriptarMensaje(){
+// 	const textoEncriptado = encriptar(mensajeOriginal.value);
+// 	mensajeEncriptado.value = textoEncriptado; 
+// }
+
+// function encriptar(mensajeOriginal){
+// 	let matrizCodigo = [["e", "enter"], ["i", "imes"] , ["a", "ai"], ["o", "ober"], ["u", "ufat"]]; 
+// 	mensajeOriginal = mensajeOriginal.toLowerCase(); 
+// 	for(let i = 0; i < matrizCodigo.length; i++){
+// 		if(mensajeOriginal.includes(matrizCodigo[i][0])){
+// 			mensajeOriginal = mensajeOriginal.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]); 
+// 		}
+// 	}
+
+// 	return mensajeOriginal;
+// }
+
+function encriptarMensaje(){
+	var saludo = "hola"; 
+	var vocales = new Array(); 
+	vocales["a"] = "ai";
+	vocales["e"] = "enter";
+	vocales["i"] = "imes";
+	vocales["o"] = "ober";
+	vocales["u"] = "ufat";
+
+	for(var iterador in vocales){
+		if(saludo.includes(iterador)){
+			console.log(iterador)
+		}
+		 
+	}
+}
+
+encriptarMensaje(); 
+
+
+
+</script>
