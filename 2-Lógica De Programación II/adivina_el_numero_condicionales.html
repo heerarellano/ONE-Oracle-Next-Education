@@ -1,0 +1,71 @@
+<<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<h1>Adivina el número</h1>
+
+</body>
+</html>
+<script type="text/javascript">
+
+	/*
+
+		Nombre del programa: adivina_el_número_condicionales.js
+		Copyright: FAHJ
+		Autor: Francisco Arellano Herdson Josué. 
+		Fecha: 12/04/2022
+		Versión: 1.0
+		Descripción: Programa que permite al usuario introducir un número entre 1 y el 10 intentando que sea el mismo número que la computadora ha tomado con la función Math.random(), además de mostrar el uso de condicionales.  
+				     
+
+	*/
+
+
+
+
+	/*
+		Nombre de función: saltarLinea	
+		Descripción: Función que realiza un salto de línea. 
+		
+	*/
+	
+	function saltarLinea(){
+		document.write("<br>");
+		document.write("<br>");
+	}
+	
+
+	/*
+		Nombre de función: imprimir
+		Descripción: Función que muestra un string o mensaje desde el mundo de JS para HTML. 
+		Parámetros: 
+		Por valor
+			mensaje: Un string o mensaje.  
+	
+    */
+	function mensaje(frase){
+		document.write(frase); 
+	}
+
+	mensaje("<h1>Programa que permite al usuario introducir un número entre 1 y el 10 intentando que sea el mismo número que la computadora ha tomado con la función Math.random(), además de mostrar el uso de condicionales.</h1>"); 
+	mensaje("<br>")
+	//Sí únicamente se utilizará Math.random(incluyente, excluyente)->devolverá un decimal, por eso se multiplica x 10. 
+	//Además de que se agrega Math.floor o Math.round .
+
+	var numeroAleatorio = Math.floor(Math.random() * 11);
+	var numeroUsuario = parseInt(prompt("Ingrese un número entre (1-10): ")); 
+
+	if(numeroUsuario ==numeroAleatorio){
+		mensaje("!Ganaste¡ Usted acertó su número es: " + numeroUsuario + " es igual al número aleatorio : " + numeroAleatorio); 
+	}else{
+
+		mensaje("Usted no acertó su número es: " + numeroUsuario + " el número aleatorio es: " + numeroAleatorio); 
+
+	}
+
+</script>

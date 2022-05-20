@@ -1,0 +1,85 @@
+<<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<h1>Adivina el número utilizando break</h1>
+
+<input type="text" class="form-control" name="texto" id="texto">
+<button class="btn"></button>
+</body>
+</html>
+<script type="text/javascript">
+
+	/*
+		Nombre del programa:  break.js
+		Copyright: FAHJ
+		Autor: Francisco Arellano Herdson Josué. 
+		Fecha: 14/04/20 
+		Versión: 1.0
+		Descripción: Programa que permite al usuario adivinar el número dandole tres oportunidades para hacerlo
+		En caso de acertar rompe el ciclo.  
+	*/
+	
+
+	/*
+
+		Nombre de función: saltarLinea
+		Copyright: HJFA
+		Autor: Francisco Arellano Herdson Josue
+		Descripción: Función que saltará dos líneas en html. 
+		Parámetros: No tiene parámetros
+
+	*/
+
+	function saltarLinea(){
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+
+	/*
+		Nombre de función:  mensaje
+		Copyright: HJFA
+		Autor: Francisco Arellano Herdson Josue
+		Descripción: Función imprimirá un mensaje en html.  
+		Parámetros: 
+			frase: Es un string.  
+	*/
+	
+	function mensaje(frase){
+		document.write(frase); 
+		saltarLinea(); 
+	}
+
+	
+
+	//Sí únicamente se utilizará Math.random(incluyente, excluyente)->devolverá un decimal, por eso se multiplica x 10. 
+	//Además de que se agrega Math.floor o Math.round .
+	var numeroAleatorio = Math.floor(Math.random() * 6);
+	var intentos = 3; 
+	var contador = 1; 
+
+	mensaje("<h1>Programa que permite al usuario adivinar el número dandole tres oportunidades para hacerlo \n en caso de acertar rompe el ciclo.  </h1>"); 
+
+	while(contador <= intentos){
+		var numeroUsuario = parseInt(prompt("Ingrese un número entre (1-10): ")); 
+
+		if(numeroUsuario ==numeroAleatorio){
+			mensaje("!Ganaste¡ Usted acertó su número es: " + numeroUsuario + " es igual al número aleatorio : " + numeroAleatorio); 
+			break; 
+		}else{
+
+			mensaje("Usted no acertó su número es: " + numeroUsuario); 
+			mensaje("Intente de nuevo"); 
+
+		}
+		contador++; 
+
+	}
+
+</script>

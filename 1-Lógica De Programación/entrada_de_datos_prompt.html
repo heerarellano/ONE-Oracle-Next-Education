@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+
+/*
+
+	Nombre del programa: entrada_de_datos_prompt.js
+	Copyright: FAHJ
+	Autor: Francisco Arellano Herdson Josué. 
+	Fecha: 12/04/2022
+	Versión: 1.0
+	Descripción: Programa que muestra el uso de prompt para capturar datos del usuario. 
+
+*/
+
+	/*
+		Nombre de función: saltarLinea	
+		Descripción: Función que realiza un salto de línea. 
+		
+	*/
+	function saltarLinea(){
+		document.write("<br>"); 
+		document.write("<br>"); 
+	}
+
+	/*
+		Nombre de función: imprimir
+		Descripción: Función que muestra un string o mensaje desde el mundo de JS para HTML. 
+		Parámetros: 
+		Por valor
+			mensaje: Un string o mensaje.  
+	
+    */
+	
+	function imprimir(frase){
+		document.write(frase)
+		saltarLinea(); 
+	}
+
+
+	/*
+		Nombre de función: calcularImc
+		Descripción: Función que calculará el índice de masa corporal. 
+		Parámetros: 
+		Por valor
+			peso: Peso de una persona, obtenida del prompt.  
+			altura: Altura de una personada, obtenida del prompt. 
+	
+    */
+
+	function calcularImc(peso, altura){
+		return (peso /( altura * altura)); 
+	}
+
+
+	imprimir(" Programa que muestra el uso de prompt para capturar datos del usuario."); 
+	//Utilizando prompt
+	pesoInformado = prompt("Informe su peso: "); 
+	aluturaInformada = prompt("Informe su altura: ");
+
+	imcCalculado = calcularImc(pesoInformado, aluturaInformada); 
+	imprimir("E imc calculado es : " + imcCalculado);  
+</script>

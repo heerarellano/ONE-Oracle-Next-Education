@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+
+
+/*
+
+	Nombre del programa: funciones.js
+	Copyright: FAHJ
+	Autor: Francisco Arellano Herdson Josué. 
+	Fecha: 12/04/2022
+	Versión: 1.0
+	Descripción: Programa que muestra el uso de las funciones en JS. 
+*/
+
+	//Se utilizan para no repetir lineas de código. 
+	//Una función recibe instrucciones que puede recibir o no parámetros de entrada y devuelve un valor. 
+
+	//Ejemplo de una función por defecto. 
+	document.write("<h1>Funciones de JS</h1>"); 
+	document.write("document.write()->Función"); 
+	alert("alert(' ')->Función "); 
+	document.write("<br>"); 
+
+
+	//Ejemplo de una función creada sin parámetros.
+	document.write("<h1>Funciones creadas</h1>"); 
+	document.write("<h2>function saltarLinea(){ }"); 
+	document.write("<br>"); 
+
+	/*
+		Nombre de función: saltarLinea	
+		Descripción: Función que realiza un salto de línea. 
+		
+	*/
+	function saltarLinea(){
+		document.write("<br>"); 
+	}
+
+	document.write("<h1>Programa que muestra el uso de las funciones en JS.</h1>"); 
+	document.write("Hola.");
+	saltarLinea(); 
+	document.write("Este es un salto de línea."); 
+
+	//Ejemplo de una función creada con parámetros. 
+	let nombre = "Josué"; 
+	function mensaje(nombre){
+		document.write("<h3>Hola " + nombre); 
+	}
+	saltarLinea(); 
+	mensaje(nombre); 
+
+</script>

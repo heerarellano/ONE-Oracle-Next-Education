@@ -1,0 +1,39 @@
+<<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<h1>Adivina el número</h1>
+
+</body>
+</html>
+<script type="text/javascript">
+
+	function saltarLinea(){
+		document.write("<br>");
+		document.write("<br>");
+	}
+	
+	function mensaje(frase){
+		document.write(frase); 
+	}
+
+
+	//Sí únicamente se utilizará Math.random(incluyente, excluyente)->devolverá un decimal, por eso se multiplica x 10. 
+	//Además de que se agrega Math.floor o Math.round .
+	var numeroAleatorio = Math.floor(Math.random() * 11);
+	var numeroUsuario = parseInt(prompt("Ingrese un número entre (1-10): ")); 
+
+	if(numeroUsuario ==numeroAleatorio){
+		mensaje("!Ganaste¡ Usted acertó su número es: " + numeroUsuario + " es igual al número aleatorio : " + numeroAleatorio); 
+	}else{
+
+		mensaje("Usted no acertó su número es: " + numeroUsuario + " el número aleatorio es: " + numeroAleatorio); 
+
+	}
+
+</script>

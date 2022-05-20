@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<h1>Programa para calcular los puntos de un equipo de futbol.</h1>
+</body>
+</html>
+<script type="text/javascript">
+
+
+
+
+	/*
+	Nombre del programa:  estructuras_condicionales
+	Copyright: FAHJ
+	Autor: Francisco Arellano Herdson Josué. 
+	Fecha: 14/04/20 
+	Versión: 1.0
+	Descripción: Programa que determina sí a un equipo de futbol esta mejor en puntos, igual o peor, respecto 
+				 al año pasado, utilizando  estructuras condiciones. 
+		
+	*/
+	
+
+	/*
+		Nombre de función: saltarLinea
+		Copyright: HJFA
+		Autor: Francisco Arellano Herdson Josue
+		Descripción: Función que saltará dos líneas en html. 
+		Parámetros: No tiene parámetros
+	*/
+
+
+	function saltarLinea(){
+		document.write("<br>"); 
+		document.write("<br>"); 
+	}
+
+
+
+	/*
+		Nombre de función:  mensaje
+		Copyright: HJFA
+		Autor: Francisco Arellano Herdson Josue
+		Descripción: Función imprimirá un mensaje en html.  
+		Parámetros: 
+			frase: Es un string.  
+	*/
+	
+
+
+	function imprimir(frase){
+		document.write(frase); 
+		saltarLinea(); 
+	}
+
+
+	mensaje("<h1>Programa que determina sí a un equipo de futbol esta mejor en puntos, igual o peor, respecto al año pasado, utilizando  estructuras condiciones. </h1>"); 
+	saltarLinea(); 
+	document.write("<h3>parseInt->Castea un dato a entero.</h3>");
+	document.write("<h3>parseFloat->Castea un dato a float.</h3>");
+
+	//Cuando solicitamos datos con prompt lo que devuelve es un string. 
+	var victoria = parseInt(prompt("Informe la cantidad de victorias: "));
+	var empates = parseFloat(prompt("Informe la cantidad de empates ")); 
+
+	var total = victoria * 3 + empates;
+	saltarLinea();  
+
+	imprimir("<h3>El total de puntos de equipo es: " + total + "</h3>");  
+
+
+	if(total > 28){
+
+
+		imprimir("El equipo esta mejor que el año pasado. "); 
+
+	}else if(total < 28){
+
+
+		imprimir("El equipo esta peor que el año pasado. "); 
+
+	}else{
+
+		imprimir("El equipo esta igual que el año pasado. "); 
+		
+	}
+
+
+
+
+</script>

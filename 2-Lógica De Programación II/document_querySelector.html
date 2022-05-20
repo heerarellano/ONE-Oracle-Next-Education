@@ -1,0 +1,85 @@
+
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<h1>Texto y botón JS.</h1>
+<h3>Compará el número del input con el número secreto. </h3>
+<input type="text" class="form-control" name="texto" id="texto">
+<button>Verificar si acertó con el secreto</button>
+</body>
+</html>
+<script type="text/javascript">
+
+	/*
+		Nombre del programa:  document.querySelector
+		Copyright: FAHJ
+		Autor: Francisco Arellano Herdson Josué. 
+		Fecha: 14/04/20 
+		Versión: 1.0
+		Descripción: Programa que capturará el input e indicará si coincide con el secreto, obteniento los datos con documen.querySelector 
+	*/
+	
+
+	/*
+
+		Nombre de función: saltarLinea
+		Copyright: HJFA
+		Autor: Francisco Arellano Herdson Josue
+		Descripción: Función que saltará dos líneas en html. 
+		Parámetros: No tiene parámetros
+
+	*/
+
+	function saltarLinea(){
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+
+	/*
+		Nombre de función:  mensaje
+		Copyright: HJFA
+		Autor: Francisco Arellano Herdson Josue
+		Descripción: Función imprimirá un mensaje en html.  
+		Parámetros: 
+			frase: Es un string.  
+	*/
+	
+	function mensaje(frase){
+		document.write(frase); 
+		saltarLinea(); 
+	}
+
+
+	//document.querySelector->Permite obtener lo que los usuarios capturaron en el input. 
+	var secreto = Math.floor(Math.random() * 5); 
+	var input = document.querySelector("input"); 
+	var button = document.querySelector("button"); 
+	input.focus();
+
+	function verificar(){
+
+		if(parseInt(input.value) == secreto){ //Input es toda la etiqueta por lo que debemos de utilizar input.value. 
+
+		alert("Usted acertó"); 
+
+		}else{
+
+		alert("Usted no acertó");
+
+		}
+
+		input.value = ""; 
+		input.focus();  //Se focalice en el input. 
+
+	}
+
+	button.onclick = verificar; // Sí se utiliza verificar() la función se activará desde el inicio de la página, en cambio verificar únicamente cuando el usuario aprieta el botón. 
+
+	
+</script>

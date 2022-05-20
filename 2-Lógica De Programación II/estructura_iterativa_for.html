@@ -1,0 +1,67 @@
+<<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<h1>Tablas de multiplicar</h1>
+
+</body>
+</html>
+<script type="text/javascript">
+
+	/*
+		Nombre del programa:  estructura_iterativa_for
+		Copyright: FAHJ
+		Autor: Francisco Arellano Herdson Josué. 
+		Fecha: 14/04/20 
+		Versión: 1.0
+		Descripción: Programa que calcula la tabla del 5 utilizando la estructura iterativa for. 
+		
+	*/
+	
+
+	/*
+		Nombre de función: saltarLinea
+		Copyright: HJFA
+		Autor: Francisco Arellano Herdson Josue
+		Descripción: Función que saltará dos líneas en html. 
+		Parámetros: No tiene parámetros
+	*/
+
+	function saltarLinea(){
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+
+	/*
+		Nombre de función:  mensaje
+		Copyright: HJFA
+		Autor: Francisco Arellano Herdson Josue
+		Descripción: Función imprimirá un mensaje en html.  
+		Parámetros: 
+			frase: Es un string.  
+	*/
+	
+	function mensaje(frase){
+		document.write(frase); 
+		saltarLinea(); 
+	}
+
+	mensaje("<h1>Programa que calcula la tabla del 5 utilizando la estructura iterativa for.</h1>"); 
+
+	
+	for(var multiplicador = 1; multiplicador <= 10; multiplicador++){
+
+		mensaje("5 * " + multiplicador + " = " + (5*multiplicador)); 
+
+	}
+
+
+
+
+</script>

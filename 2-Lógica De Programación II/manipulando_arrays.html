@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<h1>Arrays</h1>
+<h3>Compará el número del input con el número secreto dentro de un arreglo (números secretos) con números aleatorios. </h3>
+<input type="text" class="form-control" name="texto" id="texto">
+<button>Verificar si acertó con el secreto</button>
+</body>
+</html>
+<script type="text/javascript">
+
+	/*
+
+		Nombre del programa:  manipulando_arrays
+		Copyright: FAHJ
+		Autor: Francisco Arellano Herdson Josué. 
+		Fecha: 14/04/20 
+		Versión: 1.0
+		Descripción: Programa que capturará el input e indicará si coincide con el arreglo de secretos (array) de números no repetidos. 
+	
+	/*
+
+		Nombre de función: saltarLinea
+		Copyright: HJFA
+		Autor: Francisco Arellano Herdson Josue
+		Descripción: Función que saltará dos líneas en html. 
+		Parámetros: No tiene parámetros
+
+	*/
+
+	function saltarLinea(){
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+
+	/*
+		Nombre de función:  mensaje
+		Copyright: HJFA
+		Autor: Francisco Arellano Herdson Josue
+		Descripción: Función imprimirá un mensaje en html.  
+		Parámetros: 
+			frase: Es un string.  
+	*/
+	
+	function mensaje(frase){
+
+		document.write(frase); 
+		saltarLinea(); 
+
+	}
+
+
+	//document.querySelector->Permite obtener lo que los usuarios capturaron en el input. 
+	//Pueden tener diferentes tipos de datos. 
+
+	function aleatorio(){
+
+		return Math.round(Math.random() * 10);
+
+	}
+
+	function sortearNumero(cantidad){
+
+		var contador = 1;
+		var secretos = [];
+
+		while(contador<= cantidad){
+			var numeroAleatorio = aleatorio(); 
+			var bandera = false; 
+			for(var posicion = 0; posicion <= secretos.length; posicion++){
+
+				if(numeroAleatorio==secretos[posicion]){
+					bandera = true;
+					break; //Únicamente corta la última estructura iterativa. 
+				}
+			}
+
+			if (bandera == false) {
+
+				secretos.push(numeroAleatorio); 
+				contador++; 
+
+			}
+		}
+
+		return secretos; 
+	}
+
+	var secretos = sortearNumero(4); 
+	console.log(secretos); 
+	var input = document.querySelector("input"); 
+	var button = document.querySelector("button"); 
+	input.focus();
+
+	mensaje("<h1>Programa que capturará el input e indicará si coincide con el arreglo de secretos (array) de números no repetidos. </h1>"); 
+	function verificar(){
+
+		for(var posicion = 0; posicion <= secretos.length;posicion++){
+
+			if(parseInt(input.value) == secretos[posicion]){ //Input es toda la etiqueta por lo que debemos de utilizar input.value. 
+
+				alert("Usted acertó");
+				break;  
+
+			}else{
+
+				alert("Usted no acertó");
+
+			}
+
+		}
+
+		input.value = ""; 
+		input.focus();  //Se focalice en el input. 
+
+	}
+
+	button.onclick = verificar; // Sí se utiliza verificar() la función se activará desde el inicio de la página, en cambio verificar únicamente cuando el usuario aprieta el botón. 
+</script>

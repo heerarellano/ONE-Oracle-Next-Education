@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<h1>Programa para calcular los puntos de un equipo de futbol.</h1>
+</body>
+</html>
+<script type="text/javascript">
+	/*
+
+		Nombre del programa: cast_de_datos.html
+		Copyright: FAHJ
+		Autor: Francisco Arellano Herdson Josué. 
+		Fecha: 12/04/2022
+		Versión: 1.0
+		Descripción: Programa que demuestra el caste de datos string capturados con prompt() a un entero con el 
+					 método parseInt().   
+
+	*/
+
+
+	/*
+
+		Nombre de función: saltarLinea
+		Copyright: HJFA
+		Autor: Francisco Arellano Herdson Josue
+		Descripción: Función que saltará dos líneas en html. 
+		Parámetros: No tiene parámetros
+
+	*/
+
+	function saltarLinea(){
+		document.write("<br>"); 
+		document.write("<br>"); 
+	}
+
+	/*
+		Nombre de función:  mensaje
+		Copyright: HJFA
+		Autor: Francisco Arellano Herdson Josue
+		Descripción: Función imprimirá un mensaje en html.  
+		Parámetros: 
+			frase: Es un string.  
+	*/
+	function imprimir(frase){
+		document.write(frase); 
+		saltarLinea(); 
+	}
+
+	imprimir("<h1>Programa que demuestra el caste de datos string capturados con prompt() a un entero con el método parseInt(). </h1>"); 
+	saltarLinea(); 
+	document.write("<h3>parseInt->Castea un dato a entero.</h3>");
+	document.write("<h3>parseFloat->Castea un dato a float.</h3>");
+
+	//Cuando solicitamos datos con prompt lo que devuelve es un string. 
+	var victoria = parseInt(prompt("Informe la cantidad de victorias: "));
+	var empates = parseFloat(prompt("Informe la cantidad de empates ")); 
+
+	var total = victoria * 3 + empates;
+	saltarLinea();  
+
+	imprimir("<h3>El total de puntos de equipo es: " + total + "</h3>");  
+
+</script>
