@@ -3,6 +3,10 @@
 	padding: 0;
 	line-height: 150%;
 }
+
+.img-titulo{
+	margin: 10px 10px;
+}
 body{
 
 		background: #E5E5E5;
@@ -47,5 +51,7 @@ body{
 	}
 
 	.primeraSeccion{
-		display: inline;
+		
+		float: left;
+		justify-content: space-around;
 	}
