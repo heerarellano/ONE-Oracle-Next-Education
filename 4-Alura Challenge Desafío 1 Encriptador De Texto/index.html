@@ -28,23 +28,25 @@
 
 	<!--Antes HTML 5 se utilizaba div, en HTML 5 tenemos section -->
 	<section class="primeraSeccion" >
-		<img src="./imagenes/ingrese_texto.png" alt="" class="ingrese_texto" style="">
+		
 		<textarea class="mensajeOriginal" cols="100"
-		rows="20" >	
+		rows="20" onfocus="ocultarImagen() ">	
 	
-		
 		</textarea>
+		<div class="primerSeccionComplementos">
+			
+			<div class="botones">
+				<h4>Solo letras minúsculas y sin acentos</h4>
+				<button class="btnEncriptar" onclick=" btnEncriptar()">
+						Encriptar
+				</button>
+
+				<button class="btnDesencriptar" onclick="btnDesencriptar()">
+					Desencriptar
+				</button>
+		</div>
+		<img src="./imagenes/ingrese_texto.png" alt="" class="ingrese_texto" onclick="ocultarImagen()" style="">
 		
-		<h6>Solo letras minúsculas y sin acentos</h6>
-
-		<div class="botones">
-			<button class="btnEncriptar" onclick=" btnEncriptar()">
-				Encriptar
-			</button>
-
-			<button class="btnDesencriptar" onclick="btnDesencriptar()">
-				Desencriptar
-			</button>
 			
 		</div>
 		
@@ -57,13 +59,8 @@
 			
 		</textarea>
 		<img class="muneco_completo" src="./imagenes/muneco_completo.png" height="300px" width="300">
-		<button class="copiar">Copiar</button>
+		<button class="btnCopiar" onclick="copiarMensaje()">Copiar</button>
 	</section>
 </body>
 </html>
-<script type="text/javascript" src="funciones.js">
-
-
-
-
-</script>
+<script type="text/javascript" src="funciones.js"></script>

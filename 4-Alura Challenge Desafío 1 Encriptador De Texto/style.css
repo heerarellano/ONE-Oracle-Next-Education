@@ -1,4 +1,5 @@
 *{
+	
 	margin: 0;
 	padding: 0;
 	line-height: 150%;
@@ -38,30 +39,26 @@ button{
 	.mensajeEncriptado{
 		position: relative;
 		left:150px;
-		bottom: 455px;
+		bottom: 470px;
 		
 	}
 
 	.primeraSeccion{
-		background-color: red;
-		float: left;
-		margin-left: 100px;
+		/* background-color: rebeccapurple; */
 		position: relative;
-		right: 300px;
-		margin-right: 100px;
+		top: 40px;
+		left: 110px;
 		
 	}
 
 	
 	.segundaSeccion{
 
-		background-color: lightgreen;
+		/* background-color: lightgreen; */
 		position: relative;
 		margin-left: 800px;
-		margin-bottom: 1000px;
-		border: solid;
 		
-		
+			
 	}
 	
 
@@ -72,19 +69,62 @@ button{
 		
 	}
 
-	.copiar{
+	.btnCopiar{
 		position: relative; 
 		right: 330px;
-		bottom: 480px;
+		bottom: 500px;
 	}
 
 	.ingrese_texto{
 		position: relative;
-		right: 200px;
+		bottom: 450px;
+		right: 10px;
 
 	}
 
-	.botones{
-		background-color: aqua;
+
+	.primerSeccionComplementos{
 		position: relative;
+		right: 20px;
+		height: 50%;
+	}
+
+	.botones{
+
+		position: relative;
+		right: 10px;
+
+	}
+
+	.btnEncriptar{
+		background-color: lightseagreen; /* Green */
+		border: none;
+		color: white;
+		padding: 5px 5px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+	}
+
+	.btnDesencriptar{
+		background-color: lightslategray; /* Green */
+		border: none;
+		color: white;
+		padding: 5px 5px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+	}
+
+	.btnCopiar{
+		background-color: lightslategray; /* Green */
+		border: none;
+		color: white;
+		padding: 5px 5px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
 	}

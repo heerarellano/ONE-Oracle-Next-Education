@@ -21,8 +21,13 @@
 //Obtención de los objetos <textarea>
 const mensajeOriginal = document.querySelector('.mensajeOriginal'); 
 const mensajeEncriptado = document.querySelector('.mensajeEncriptado'); 
+var btnCopiar = document.querySelector(".btnCopiar"); 
+var imgMuneco = document.querySelector(".muneco_completo"); 
+var imgIngreseTexto = document.querySelector(".ingrese_texto"); 
 
 
+
+ console.log(document.querySelector('.mensajeOriginal') === document.activeElement)
 
 //Definición de funciones
 /*
@@ -99,6 +104,7 @@ function desencriptarMensaje(mensajeEncriptado){
 function btnEncriptar(){
 	mensajeEncriptado.value = encriptarMensaje(mensajeOriginal.value);
 	mensajeOriginal.value = " "; 
+	imgMuneco.style.visibility='hidden';
 
 }
 
@@ -114,8 +120,21 @@ function btnEncriptar(){
 function btnDesencriptar(){
 
 	mensajeOriginal.value = desencriptarMensaje(mensajeEncriptado.value); 
-	mensajeEncriptado.value = " "; 
+	mensajeEncriptado.value = mensajeOriginal.value; 
+	mensajeOriginal.value = " "; 
 
 }
 
 
+function ocultarImagen(){
+	imgIngreseTexto.style.visibility="hidden"; 
+  }
+
+function copiarMensaje(){
+
+    
+    mensajeEncriptado.select();
+	document.execCommand('copy');
+    
+
+}
