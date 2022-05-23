@@ -5,7 +5,7 @@
 }
 
 .img-titulo{
-	margin: 10px 10px;
+	margin: 20px 20px;
 }
 body{
 
@@ -14,20 +14,10 @@ body{
 		padding: 0;
 }
 	
-
-	textarea{
-		display: block;
-	}
-
-	button{
+button{
 		
 		border-color: #FFFFFF;
 		border-radius: 100px;
-	}
-
-	textarea{
-		margin: 10px 10px;
-		display: block;
 	}
 
 
@@ -40,18 +30,61 @@ body{
 
 
 	.mensajeOriginal{
-		margin-top: 90px;
-
+		position: relative;
+		right: 40px;
+	
 	}
 
 	.mensajeEncriptado{
 		position: relative;
-		margin-top: 20px;
-		margin-left: 90px;
+		left:150px;
+		bottom: 455px;
+		
 	}
 
 	.primeraSeccion{
-		
+		background-color: red;
 		float: left;
-		justify-content: space-around;
+		margin-left: 100px;
+		position: relative;
+		right: 300px;
+		margin-right: 100px;
+		
+	}
+
+	
+	.segundaSeccion{
+
+		background-color: lightgreen;
+		position: relative;
+		margin-left: 800px;
+		margin-bottom: 1000px;
+		border: solid;
+		
+		
+	}
+	
+
+	.muneco_completo{
+		position: relative; 
+		right: 170px;
+		bottom: 550px;
+		
+	}
+
+	.copiar{
+		position: relative; 
+		right: 330px;
+		bottom: 480px;
+	}
+
+	.ingrese_texto{
+		position: relative;
+		right: 200px;
+
+	}
+
+	.botones{
+		background-color: aqua;
+		position: relative;
 	}

@@ -17,7 +17,9 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>Encriptador de texto.</title>
 </head>
-
+<style>
+    
+</style>
 <body>
 
 	<header>
@@ -25,33 +27,37 @@
 	</header>
 
 	<!--Antes HTML 5 se utilizaba div, en HTML 5 tenemos section -->
-	<section class="primeraSeccion">
-		<textarea class="mensajeOriginal" cols="40"
-		rows="6">	
-			
+	<section class="primeraSeccion" >
+		<img src="./imagenes/ingrese_texto.png" alt="" class="ingrese_texto" style="">
+		<textarea class="mensajeOriginal" cols="100"
+		rows="20" >	
+	
+		
 		</textarea>
-
+		
 		<h6>Solo letras minúsculas y sin acentos</h6>
 
 		<div class="botones">
-			<button class="encriptar" onclick=" btnEncriptar()">
+			<button class="btnEncriptar" onclick=" btnEncriptar()">
 				Encriptar
 			</button>
 
-			<button class="desencriptar" onclick="btnDesencriptar()">
+			<button class="btnDesencriptar" onclick="btnDesencriptar()">
 				Desencriptar
 			</button>
-
+			
 		</div>
 		
 	</section>
 
 	<section class="segundaSeccion">
 		
-		<textarea class="mensajeEncriptado" cols="18" rows="8">
+		<textarea class="mensajeEncriptado" cols="36" rows="20">
+	
 			
 		</textarea>
-
+		<img class="muneco_completo" src="./imagenes/muneco_completo.png" height="300px" width="300">
+		<button class="copiar">Copiar</button>
 	</section>
 </body>
 </html>
